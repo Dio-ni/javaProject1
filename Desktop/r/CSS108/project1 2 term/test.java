@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class test{
    Map map;
-   public static void main(String[] args)  throws IOException{
+   public static void main(String[] args)  throws IOException {
       Scanner input = new Scanner(System.in);
       //input map size
       Map map = new Map(input.nextInt());
@@ -35,12 +35,11 @@ public class test{
    }
 }
 
-class Map extends InvalidMapException{
+class Map{
    final static Scanner in = new Scanner(System.in);
    private int size;
-   public char[][] mapIn;
+   public  char[][] mapIn;
    public Map(int size){
-      
       this.size = size;
       mapIn = new char[size][size];
       for(int i=0;i<size;i++)
