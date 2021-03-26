@@ -1,9 +1,10 @@
-import java.io.*;
+public class testwithexc {
+   import java.io.*;
 import java.util.Scanner;
 
-public class test implements Player{
+public class test{
    Map map;
-   public static void main(String[] args)  throws IOException {
+   public static void main(String[] args)  throws IOException{
       Scanner input = new Scanner(System.in);
       test game;
       try {
@@ -76,61 +77,10 @@ class Map{
 }
 
 class InvalidMapException extends Exception{
-   
    String string;
    public InvalidMapException(String string){
       super("Invalid size " + string);
       this.string = string;
    }
 }
-
-
-interface Player{
-   void setMap(Map newMap);
-   void moveRight();
-   void moveLeft();
-   void moveUp();
-   void moveDown();
-   
-
-}
-class MyPlayer extends Map implements Player{
-   public MyPlayer(int size) throws InvalidMapException {
-      super(size);
-   }
-
-   private Map map;
-   Scanner input;
-   @Override
-   public void setMap(Map map) {
-      this.map = main(input.nextInt());
-   }
-
-   @Override
-   public void moveRight() {
-
-      
-   }
-
-   @Override
-   public void moveLeft() {
-      
-   }
-
-   @Override
-   public void moveUp() {
-      
-   }
-
-   @Override
-   public void moveDown() {
-      
-   }
-
-   @Override
-   public Position getPosition() {
-     Position position = new Position(0, 0);
-      return position;
-   }
-
 }
